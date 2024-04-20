@@ -1,8 +1,9 @@
 package suai.vladislav.letixprosto.repositories;
 
-import suai.vladislav.letixprosto.models;
-import suai.vladislav.letixprosto.repositories.BaseRepository;
+//import org.springframework.data.repository.CrudRepository;
+//import suai.vladislav.letixprosto.models.Base;
+//import suai.vladislav.letixprosto.repositories.BaseRepository;
 
 
-public interface BaseRepository extends CrudRepository<Base, Long> {
-}
+//public interface BaseRepository extends CrudRepository<Long, Long> {
+//}
