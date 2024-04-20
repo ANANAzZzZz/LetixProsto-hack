@@ -2,10 +2,11 @@ package suai.vladislav.letixprosto.models.vacancy;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 
 import java.util.List;
 
-public class Response {
+public class ResponseVacancy {
 
     @JsonIgnore
     private String next;
@@ -16,6 +17,7 @@ public class Response {
     @JsonIgnore
     private Integer count;
 
+    @Getter
     @JsonProperty("results")
     private List<ResultsItem> results;
 
@@ -31,7 +33,4 @@ public class Response {
         return count;
     }
 
-    public List<ResultsItem> getResults() {
-        return results;
-    }
 }
