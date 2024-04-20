@@ -8,18 +8,18 @@ import org.jetbrains.compose.resources.FontResource
 
 @ExperimentalResourceApi
 private object Font0 {
-  public val IndieFlower_Regular: FontResource by 
-      lazy { init_IndieFlower_Regular() }
+  public val MPLUSRounded1c: FontResource by 
+      lazy { init_MPLUSRounded1c() }
 }
 
 @ExperimentalResourceApi
-internal val Res.font.IndieFlower_Regular: FontResource
-  get() = Font0.IndieFlower_Regular
+internal val Res.font.MPLUSRounded1c: FontResource
+  get() = Font0.MPLUSRounded1c
 
 @ExperimentalResourceApi
-private fun init_IndieFlower_Regular(): FontResource = org.jetbrains.compose.resources.FontResource(
-  "font:IndieFlower_Regular",
+private fun init_MPLUSRounded1c(): FontResource = org.jetbrains.compose.resources.FontResource(
+  "font:MPLUSRounded1c",
     setOf(
-      org.jetbrains.compose.resources.ResourceItem(setOf(), "font/IndieFlower-Regular.ttf"),
+      org.jetbrains.compose.resources.ResourceItem(setOf(), "font/MPLUSRounded1c.ttf"),
     )
 )

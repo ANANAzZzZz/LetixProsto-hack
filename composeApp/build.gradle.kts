@@ -42,6 +42,10 @@ kotlin {
     }
 
     sourceSets {
+        val koinVersion = "3.5.3"
+        val ktorVersion = "2.3.2"
+        val coroutinesVersion = "1.5.0-native-mt"
+        val serializationVersion = "1.2.2"
         all {
             languageSettings {
                 optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
@@ -61,6 +65,15 @@ kotlin {
             implementation(libs.kotlinx.datetime)
             implementation(libs.multiplatformSettings)
             implementation(libs.koin.core)
+            implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+            implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+            implementation("io.ktor:ktor-client-cio:$ktorVersion")
+            implementation("io.ktor:ktor-client-json:$ktorVersion")
+            implementation("io.ktor:ktor-client-auth:$ktorVersion")
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
+            implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+            implementation("io.ktor:ktor-client-core:$ktorVersion")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
         }
 
         commonTest.dependencies {

@@ -1,4 +1,4 @@
-package ru.skittens.prostoleti.theme
+package ru.skittens.prostoleti.presentation.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
