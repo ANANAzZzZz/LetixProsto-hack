@@ -17,13 +17,11 @@ import java.util.ArrayList;
 @RestController
 @RequiredArgsConstructor
 public class ResponseVacancyController {
-    private final UserService userService;
     private final ResponseVacancyService responseVacancyService;
 
-    @GetMapping("/users")
-    public ArrayList<User> getUsers() {
-        System.out.println(userService.getAllUsers());
-        return userService.getAllUsers();
+    @GetMapping("/getVacancy")
+    public ArrayList<ResponseVacancy> getVacancy() {
+        return responseVacancyService.getResponse();
     }
 
     @GetMapping("/addVacancy")
