@@ -6,7 +6,6 @@ import suai.vladislav.letixprosto.models.User;
 import suai.vladislav.letixprosto.repositories.UserRepository;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class UserService {
