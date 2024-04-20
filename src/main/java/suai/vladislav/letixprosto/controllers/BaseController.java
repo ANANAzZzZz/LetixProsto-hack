@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.json.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import suai.vladislav.letixprosto.models.User;
@@ -21,12 +22,13 @@ import java.util.Scanner;
 @RestController
 @RequiredArgsConstructor
 public class BaseController {
-    private final UserService userService;
+//    @Autowired
+//    private final UserService userService;
 
-    @GetMapping("/")
-    public ArrayList<User> getBase() {
-        System.out.println(userService.getAllUsers());
-        return userService.getAllUsers();
+//    @GetMapping("/")
+//    public ArrayList<User> getBase() {
+//        System.out.println(userService.getAllUsers());
+//        return userService.getAllUsers();
 
 //        try {
 //            URL url = new URL("https://researchinspb.ru/api/v1/public/event/?format=json");
@@ -65,5 +67,5 @@ public class BaseController {
 
 
 //        return "123";
-    }
+//    }
 }
