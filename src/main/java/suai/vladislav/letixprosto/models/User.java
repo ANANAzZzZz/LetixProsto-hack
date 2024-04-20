@@ -1,10 +1,16 @@
 package suai.vladislav.letixprosto.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
 
 @Document(collection = "user")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
     private String _id;
