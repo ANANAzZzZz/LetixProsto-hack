@@ -8,8 +8,8 @@
         <version>2.5.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.example</groupId>
-    <artifactId>toWorkSpring</artifactId>
+    <groupId>suai.vladislav</groupId>
+    <artifactId>letixprosto</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>toWorkSpring</name>
     <description>toWorkSpring</description>
