@@ -18,6 +18,7 @@ sealed class ScreenRoutes {
         Preferences,
         Services,
         Internship,
+        Vacancies,
         SelectHousing
     }
 

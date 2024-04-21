@@ -1,7 +1,9 @@
 package ru.skittens.prostoleti.domain.entity
 
+import kotlinx.serialization.Serializable
 import ru.skittens.prostoleti.data.util.DataTime
 
+@Serializable
 data class Lesson(
     val comment: String,
     val dateTime: DataTime,
@@ -15,7 +17,7 @@ data class Lesson(
     val start_time_seconds: Int,
     val subjectType: String,
     val teacher: String,
-    val temp_changes: List<Any>,
-    val url: Any,
+    val temp_changes: List<TempChange>,
+    val url: String?,
     val week: String
 )

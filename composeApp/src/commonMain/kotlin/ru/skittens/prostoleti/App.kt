@@ -9,6 +9,7 @@ import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.rememberNavigator
 import ru.skittens.prostoleti.presentation.navigation.EnrolleeMainNavigation
+import ru.skittens.prostoleti.presentation.navigation.MainNavigation
 import ru.skittens.prostoleti.presentation.navigation.StudentMainNavigation
 import ru.skittens.prostoleti.presentation.routes.GroupRoutes
 import ru.skittens.prostoleti.presentation.routes.ScreenRoutes
@@ -35,7 +36,7 @@ internal fun App() = AppTheme {
                 scene(ScreenRoutes.Start.Authorization.name) {
                     AuthorizationScreen(
                         { navigator.navigate(ScreenRoutes.Start.Registration.name) },
-                        { navigator.navigate(GroupRoutes.ScheduleStudent.name) },
+                        { navigator.navigate("main") },
                         { navigator.navigate(ScreenRoutes.Enrollee.MainEnrollee.name) }
                     )
                 }
@@ -47,7 +48,9 @@ internal fun App() = AppTheme {
                     )
                 }
             }
-            StudentMainNavigation(navigator)
+            scene("main") {
+                MainNavigation()
+            }
             scene(ScreenRoutes.Enrollee.MainEnrollee.name) {
                 EnrolleeMainNavigation(navigator)
             }

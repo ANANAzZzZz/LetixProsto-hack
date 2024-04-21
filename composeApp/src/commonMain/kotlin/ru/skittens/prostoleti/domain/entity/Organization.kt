@@ -1,0 +1,46 @@
+package ru.skittens.prostoleti.domain.entity
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Organization(
+    val accreditationCertificate: String? = null,
+    val address: String,
+    val addressEng: String? = null,
+    val cover: String? = null,
+    val createdAt: String? = null,
+    val description: String,
+    val descriptionEng: String? = null,
+    val educationalLevel: String? = null,
+    val educationalStandard: String? = null,
+    val educationalType: String? = null,
+    val email: String? = null,
+    val fullTitle: String? = null,
+    val fullTitleEng: String? = null,
+    val id: Int,
+    val inn: String? = null,
+    val isEducational: Boolean,
+    val isHead: Boolean,
+    val isParticipant: Boolean,
+    val isPublished: Boolean,
+    val licenze: String? = null,
+    val logo: Logo,
+    val name: String,
+    val ogrn: String? = null,
+    val organization: OrganizationX,
+    val parent: String? = null,
+    val phone: String? = null,
+    val publishedAt: String? = null,
+    val shortTitle: String? = null,
+    val shortTitleEng: String? = null,
+    val site: String,
+    val status: Boolean,
+    val supervisorFio: String? = null,
+    val supervisorFioEng: String? = null,
+    val supervisorJobTitle: String? = null,
+    val supervisorJobTitleEng: String? = null,
+    val telegram: String? = null,
+    val type: String? = null,
+    val updatedAt: String? = null,
+    val vk: String? = null
+)

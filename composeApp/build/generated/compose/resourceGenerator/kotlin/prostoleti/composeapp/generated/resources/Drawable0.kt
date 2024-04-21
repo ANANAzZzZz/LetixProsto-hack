@@ -47,6 +47,12 @@ private object Drawable0 {
   public val avatar_9: DrawableResource by 
       lazy { init_avatar_9() }
 
+  public val calendar: DrawableResource by 
+      lazy { init_calendar() }
+
+  public val category: DrawableResource by 
+      lazy { init_category() }
+
   public val check_circle: DrawableResource by 
       lazy { init_check_circle() }
 
@@ -62,6 +68,12 @@ private object Drawable0 {
   public val ic_rotate_right: DrawableResource by 
       lazy { init_ic_rotate_right() }
 
+  public val line_2: DrawableResource by 
+      lazy { init_line_2() }
+
+  public val location: DrawableResource by 
+      lazy { init_location() }
+
   public val logo: DrawableResource by 
       lazy { init_logo() }
 
@@ -70,6 +82,9 @@ private object Drawable0 {
 
   public val sparkles: DrawableResource by 
       lazy { init_sparkles() }
+
+  public val user_2: DrawableResource by 
+      lazy { init_user_2() }
 }
 
 @ExperimentalResourceApi
@@ -229,6 +244,30 @@ private fun init_avatar_9(): DrawableResource = org.jetbrains.compose.resources.
 )
 
 @ExperimentalResourceApi
+internal val Res.drawable.calendar: DrawableResource
+  get() = Drawable0.calendar
+
+@ExperimentalResourceApi
+private fun init_calendar(): DrawableResource = org.jetbrains.compose.resources.DrawableResource(
+  "drawable:calendar",
+    setOf(
+      org.jetbrains.compose.resources.ResourceItem(setOf(), "drawable/calendar.xml"),
+    )
+)
+
+@ExperimentalResourceApi
+internal val Res.drawable.category: DrawableResource
+  get() = Drawable0.category
+
+@ExperimentalResourceApi
+private fun init_category(): DrawableResource = org.jetbrains.compose.resources.DrawableResource(
+  "drawable:category",
+    setOf(
+      org.jetbrains.compose.resources.ResourceItem(setOf(), "drawable/category.xml"),
+    )
+)
+
+@ExperimentalResourceApi
 internal val Res.drawable.check_circle: DrawableResource
   get() = Drawable0.check_circle
 
@@ -293,6 +332,30 @@ private fun init_ic_rotate_right(): DrawableResource =
 )
 
 @ExperimentalResourceApi
+internal val Res.drawable.line_2: DrawableResource
+  get() = Drawable0.line_2
+
+@ExperimentalResourceApi
+private fun init_line_2(): DrawableResource = org.jetbrains.compose.resources.DrawableResource(
+  "drawable:line_2",
+    setOf(
+      org.jetbrains.compose.resources.ResourceItem(setOf(), "drawable/line_2.xml"),
+    )
+)
+
+@ExperimentalResourceApi
+internal val Res.drawable.location: DrawableResource
+  get() = Drawable0.location
+
+@ExperimentalResourceApi
+private fun init_location(): DrawableResource = org.jetbrains.compose.resources.DrawableResource(
+  "drawable:location",
+    setOf(
+      org.jetbrains.compose.resources.ResourceItem(setOf(), "drawable/location.xml"),
+    )
+)
+
+@ExperimentalResourceApi
 internal val Res.drawable.logo: DrawableResource
   get() = Drawable0.logo
 
@@ -325,5 +388,17 @@ private fun init_sparkles(): DrawableResource = org.jetbrains.compose.resources.
   "drawable:sparkles",
     setOf(
       org.jetbrains.compose.resources.ResourceItem(setOf(), "drawable/sparkles.xml"),
+    )
+)
+
+@ExperimentalResourceApi
+internal val Res.drawable.user_2: DrawableResource
+  get() = Drawable0.user_2
+
+@ExperimentalResourceApi
+private fun init_user_2(): DrawableResource = org.jetbrains.compose.resources.DrawableResource(
+  "drawable:user_2",
+    setOf(
+      org.jetbrains.compose.resources.ResourceItem(setOf(), "drawable/user_2.xml"),
     )
 )
