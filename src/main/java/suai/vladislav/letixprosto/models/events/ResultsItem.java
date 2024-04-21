@@ -1,10 +1,13 @@
 package suai.vladislav.letixprosto.models.events;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.jetbrains.annotations.NotNull;
+import suai.vladislav.letixprosto.models.LessonEvent;
+import suai.vladislav.letixprosto.util.DataTime;
 
 import java.util.List;
 
-public class ResultsItem{
+public class ResultsItem implements LessonEvent {
 
 	@JsonProperty("membersStatuses")
 	private List<MembersStatusesItem> membersStatuses;
@@ -119,6 +122,9 @@ public class ResultsItem{
 
 	@JsonProperty("status")
 	private Status status;
+
+	private Integer ord;
+	private DataTime dataTime;
 
 	public List<MembersStatusesItem> getMembersStatuses(){
 		return membersStatuses;
@@ -270,5 +276,29 @@ public class ResultsItem{
 
 	public Status getStatus(){
 		return status;
+	}
+
+	@Override
+	public int getOrd() {
+		return ord;
+	}
+
+	@Override
+	public void setOrd(int i) {
+		ord = i;
+	}
+
+	@NotNull
+	@Override
+	public DataTime getDateTime() {
+		if (dataTime != null)
+			return dataTime;
+		else
+			return DataTime.Companion.parse(periods.get(0).getLower().substring(0, 16));
+	}
+
+	@Override
+	public void setDateTime(@NotNull DataTime dataTime) {
+		this.dataTime = dataTime;
 	}
 }
