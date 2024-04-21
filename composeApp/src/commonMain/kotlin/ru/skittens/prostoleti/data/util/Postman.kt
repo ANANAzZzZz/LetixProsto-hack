@@ -5,7 +5,7 @@ import io.ktor.client.call.*
 import io.ktor.client.engine.*
 import io.ktor.client.network.sockets.*
 import io.ktor.client.plugins.*
-import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.client.statement.*

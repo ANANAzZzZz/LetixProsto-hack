@@ -1,6 +1,5 @@
 package ru.skittens.prostoleti.presentation.navigation
 
-import androidx.compose.runtime.Composable
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.RouteBuilder
 import ru.skittens.prostoleti.presentation.routes.GroupRoutes
@@ -16,11 +15,10 @@ import ru.skittens.prostoleti.presentation.screens.main.service.InternshipScreen
 import ru.skittens.prostoleti.presentation.screens.main.service.SelectHousingScreen
 import ru.skittens.prostoleti.presentation.screens.main.service.ServicesScreen
 
-@Composable
 fun RouteBuilder.StudentMainNavigation(navigator: Navigator) {
-    group(GroupRoutes.Schedule.name, ScreenRoutes.Student.Schedule.name) {
+    group(GroupRoutes.ScheduleStudent.name, ScreenRoutes.Student.Schedule.name) {
         scene(ScreenRoutes.Student.Schedule.name) {
-            ScheduleScreen { navigator.navigate(ScreenRoutes.Student.Events.name) }
+            ScheduleScreen({ navigator.navigate(ScreenRoutes.Student.Events.name) })
         }
 
         scene(ScreenRoutes.Student.Events.name) {
@@ -55,7 +53,7 @@ fun RouteBuilder.StudentMainNavigation(navigator: Navigator) {
         }
     }
 
-    group(GroupRoutes.Services.name, ScreenRoutes.Student.Services.name) {
+    group(GroupRoutes.ServicesStudent.name, ScreenRoutes.Student.Services.name) {
         scene(ScreenRoutes.Student.Services.name) {
             ServicesScreen(
                 { navigator.navigate(ScreenRoutes.Student.Internship.name) },

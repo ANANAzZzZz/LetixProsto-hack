@@ -2,9 +2,9 @@ package ru.skittens.prostoleti.presentation.routes
 
 enum class GroupRoutes {
     Start,
-    Schedule,
+    ScheduleStudent,
     ProfileStudent,
-    Services,
+    ServicesStudent,
     Calculator,
     Admission,
     ProfileEnrollee

@@ -1,4 +1,4 @@
-package ru.castprograms.platformsuai.data.time
+package ru.skittens.prostoleti.data.util
 
 import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimeUnit
@@ -12,8 +12,10 @@ import kotlinx.datetime.number
 import kotlinx.datetime.plus
 import kotlinx.datetime.toInstant
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.serialization.Serializable
 
 /** DataTime is class for work with times and dates **/
+@Serializable
 open class DataTime(
     var year: Int = 0,
     var mouth: Int = 0,
