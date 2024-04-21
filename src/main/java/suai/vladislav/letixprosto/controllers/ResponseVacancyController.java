@@ -27,7 +27,7 @@ public class ResponseVacancyController {
         ArrayList<ResponseVacancy> serviceResponseList = responseVacancyService.getResponse();
 
         Set<String> comptenciesSet = new HashSet<>(Arrays.asList(CompetenciesName.split(";")));
-    
+
         ResultsItem match;
 
         ArrayList<ResultsItem> ans = new ArrayList<>();
@@ -57,7 +57,7 @@ public class ResponseVacancyController {
     @GetMapping("/addVacancy")
     public void addVacancy() {
         try {
-            for (Integer i = 1; i <= 5; i++) {
+            for (Integer i = 90; i <= 120; i++) {
                 String json = Util.getJSONByLink("https://researchinspb.ru/api/v1/public/vacancy/?format=json&pageSize=200&page=" + i);
 
                 ObjectMapper mapper = new ObjectMapper();
