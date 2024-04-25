@@ -6,8 +6,6 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
-import kotlinx.datetime.LocalTime
-import kotlinx.datetime.atDate
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import lombok.RequiredArgsConstructor
@@ -55,7 +53,6 @@ class TimetableController {
         val thisScheduleWeek =
             (DataTime.now().getWeek() - (semester?.startDate?.let { DataTime.parse(it.substring(0, 16)) }
                 ?: DataTime.now()).getWeek()) % 2 + 1
-        println(thisScheduleWeek)
 
         return (timetable.data?.days?.getAll(
             thisScheduleWeek.toString(),
